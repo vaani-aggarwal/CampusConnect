@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #E3D5CA;
+  color: #333;
+  line-height: 1.6;
+}
+
+nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 30px;
+}
+
+nav h1{
+  color: white;
+  font-size: 28px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 4px 30px;
+  margin: 5px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  background-color: #fff;
+  color: black;
+}
+
+#searchbox{
+    float: block-end;
+    align-items:end;
+    position: relative;
+    left: 1100px;
+    font-weight: bold;
+}
+
+#searchbox input {
+  padding: 5px 50px;
+  border: 1px solid #ccc;
+  border-radius: 34px;
+}
+
+#searchbox input:focus{
+  border-color: #614b4b;
+  box-shadow: 0 0 5px rgba(97, 75, 75, 0.5);
+  outline: none;
+}
+
+main {
+  padding: 40px 30px;
+}
+
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  font-size: 14px;
+  color: #555;
+}
+
+@media screen and (max-width: 768px) {
+  .welcome, nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #searchbox input {
+    margin: 10px 0 0 0;
+  }
+}
+
+#seniorlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.flashcard {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 25px 20px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flashcard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.flashcard h4 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 12px;
+}
+
+.flashcard p {
+  font-size: 18px;
+  color: #444;
+  margin: 6px 0;
+}
+
+.flashcard button {
+  margin-top: 15px;
+  align-self: flex-start;
+  background: #614b4b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.flashcard button:hover {
+  background-color: rgb(93, 55, 55);
+}

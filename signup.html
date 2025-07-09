@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SignUp - CampusConnect</title>
+        <link rel="stylesheet" href="signup-style.css">
+    </head>
+    <body>
+        <div class="signup">
+            <header>
+                <nav>
+                    <a href="#" id="back-btn">← Back</a>
+                </nav>
+            </header>
+
+            <main>
+                <h3>Join the platform that connects dreams to direction.</h3>
+                <br>
+
+                <form action="#" method="post">
+                    <label for="fname">Tell us your full name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Full Name" required>
+                    <br>
+
+                    <label for="mail">Enter your college email address:</label>
+                    <input type="email" id="mail" placeholder="E-mail address" required>
+                    <br>
+
+                    <label for="pass">Choose a secure password:</label>
+                    <input type="password" id="pass" placeholder="Create password" required minlength="8">
+                    <br>
+
+                    <label for="cpass">Please confirm your password</label>
+                    <input type="password" id="cpass" placeholder="Re-enter password" required>
+                    <br>
+
+                    <p>How would you like to join the platform?</p>
+                    <div id="role-group" class="radio-group">
+                        <label class="custom-radio">
+                            <input type="radio" name="role" value="junior" id="junior-radio">
+                            <span class="radio-mark"></span>
+                            Junior - Looking for Guidance
+                        </label>
+
+                        <label class="custom-radio">
+                            <input type="radio" name="role" value="senior" id="senior-radio">
+                            <span class="radio-mark"></span>
+                            Senior - Want to Mentor
+                        </label>
+                    </div>
+                    <br>
+
+                    <div id="junior-fields" style="display: none;">
+                        <label for="junior-year">Current year of study: </label>
+                        <input type="text" id="junior-year" name="year" placeholder="e.g., 2nd Year" required>
+                        <br>
+                        <label for="program">Program: </label>
+                        <input type="text" id="program" name="program" placeholder="e.g., BCA, B.Tech" required>
+                    </div>
+                    <br>
+
+                    <div id="senior-fields" style="display: none;">
+                        <label for="company">Company name placed in:</label>
+                        <input type="text" id="company" name="company" placeholder="e.g., Infosys, Google" required>
+                        <label for="designation">Designation: </label>
+                        <input type="text" id="designation" name="roleTitle" placeholder="e.g., SDE, Analyst" required>
+                        <label for="senior-year">Graduation Year:</label>
+                        <select name="year" id="senior-year" required>
+                            <option value="">Select Year</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                            <option value="2024">2024</option>
+                            <option value="2025">2025</option>
+                        </select> 
+                        <br>
+                        <br>
+
+                        <label for="linkedin">LinkedIn URL (optional)</label>
+                        <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+                    </div>
+                    <button type="submit">Get Started</button>
+                </form>
+            </main>
+
+            <footer>
+                <p>
+                    Already have an account?
+                    <a href="login.html">Log In</a>
+                </p>
+            </footer>
+        </div>
+        
+        <script src="signup-validation.js"></script>
+    </body>
+</html>

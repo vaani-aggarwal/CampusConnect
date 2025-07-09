@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LogIn - CampusConnect </title>
+        <link rel="stylesheet" href="login-style.css">
+    </head>
+    <body>
+        <div class="login">
+            <header>
+                <nav>
+                    <a href="#" id="back-btn">← Back</a>
+                </nav>
+            </header>
+
+            <main>
+                <h2>"Welcome back!"</h2>
+                <h4>Your journey continues — log in to learn or guide.</h4>
+                <br> 
+
+                <form id="loginForm" action="#" method="post">
+                    <label for="mail">Enter your college email address:</label>
+                    <input type="email" id="mail" placeholder="E-mail address" required>
+                    <small id="emailError" class="error"></small>
+                    <br>
+
+                    <label for="pass">Enter your password:</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="pass" placeholder="Your password">
+                        <span id="togglePassword" class="eye">👁️</span>
+                    </div>
+                    <small id="passError" class="error"></small>
+                    <br>
+
+                    <div class="remember">
+                        <input type="checkbox" id="rememberMe">
+                        <label for="rememberMe">Remember me</label>
+                    </div>
+
+                    <a href="#">Forgot Password?</a>
+                    <br>
+
+                    <button type="submit">Access Now</button>
+
+                    <p id="loginError" style="color:red; margin-top: 10px;"></p>
+                </form>
+            </main>
+
+            <footer>
+                <p>
+                    Don't have an account?
+                    <a href="signup.html">Sign Up</a>
+                </p>
+            </footer>
+        </div>
+        
+        <script src="login-validation.js"></script>
+    </body>
+</html>

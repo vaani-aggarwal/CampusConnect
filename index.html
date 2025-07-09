@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CampusConnect</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="data:,">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="nav-links">
+                    <h1>CampusConnect</h1>
+                    <a href="index.html">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#" id="dashboard-link">Dashboard</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <main id="about">
+            <section id="welcome">
+                <h3>One Campus. Many Journeys. One Place to Connect.</h3>
+                <p>Your seniors are just a message away—start your placement prep with real advice.</p>
+            </section>
+
+            <section id="mission">
+                <div>
+                    <h2>Our Mission</h2>
+                    <p>Our motive is to connect juniors with placed seniors to bridge the gap between learning and achieving. We believe that real stories, honest advice, and shared experiences can empower students to prepare better for placements.<br>
+                    This platform is built to make mentorship easy, accessible, and meaningful—whether it's clearing doubts, finding resources, or just hearing how someone else did it.</p>
+                </div>
+                <div>
+                    <h2>Voices from Campus</h2>
+                    <p>"Back when I was preparing, I had no idea where to start. I just wanted someone who could tell me what actually works. That's why I joined this platform—to be that someone for juniors now."<br><span>--- Ritika Sharma, placed at TCS</span></p>
+                    <br>
+                    <p>"Getting advice directly from seniors made everything less confusing. They told me what to focus on and shared resources I never would've found on my own."<br><span>---Ayush Mehta, 3rd year BCA student</span></p>
+                </div>
+            </section>
+
+            <section id="calltoaction">
+                <h3>Take the First Step With CampusConnect</h3>
+                <p>Connect. Learn. Succeed. Sign up today to start your placement journey or guide someone else's.</p>
+                <button><a href="signup.html?role=junior">Find a Senior</a></button>
+                <button><a href="signup.html?role=senior">Become a Mentor</a></button>
+            </section>
+        </main>
+
+        <footer id="contact">
+            <p>&copy; 2025 CampusConnect</p>
+            <p>
+                <a href="terms.html">Terms of Service</a> |
+                <a href="privacy.html">Privacy Policy</a> |
+                <a href="faq.html">FAQ</a> |
+                <a href="mailto:admin@campusconnect.com?subject=Feedback">Feedback</a>
+            </p>
+            <p>Contact us at: <a href="mailto:admin@campusconnect.com">admin@campusconnect.com</a></p>
+            <p>Follow us: @_.campusconnect</p>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const dashboardLink = document.getElementById("dashboard-link");
+
+                dashboardLink.addEventListener("click", (e) => {
+                    e.preventDefault();
+
+                    const role = localStorage.getItem("currentUserRole");
+
+                    if (role === "junior") {
+                        window.location.href = "junior-dashboard.html";
+                    } else if (role === "senior") {
+                        window.location.href = "senior-dashboard.html";
+                    } else {
+                        alert("Please log in first!");
+                        window.location.href = "login.html";
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

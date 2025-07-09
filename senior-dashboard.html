@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Senior Dashboard - CampusConnect</title>
+      <link rel="stylesheet" href="senior-style.css">
+  </head>
+
+  <body>
+    <header>
+      <nav>
+          <div class="nav-links">
+            <h1>CampusConnect</h1>  
+            <a href="index.html">Home</a>
+            <a href="profile.html" id="profile-link">Profile</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="#" id="logout-btn">Log Out</a>
+          </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="profile-card">
+        <div class="profile-img">
+          <img id="profile-picture" src="img.jpeg.png" alt="Profile Picture" />
+          <label for="upload-photo" class="upload-overlay">
+            <span class="camera-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 0 24 24" width="16" fill="#fff">
+                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.717.04a1.003 1.003 0 0 0 0-1.41l-2.34-2.34a1.0031.003 0 0 0-1.41 0l-1.83 1.833.75 3.75 1.83-1.83z"/>
+              </svg>
+            </span>
+          </label>
+          <input type="file" id="upload-photo" accept="image/*" style="display: none" />
+        </div>
+
+        <div class="profile-info">
+          <h2 id="profile-name">Kunal Verma</h2>
+          <p id="profile-designation">Software Engineer</p>
+          <p id="profile-company">TCS Digital</p>
+          <p id="profile-year">Class of 2022</p>
+          <div class="profile-actions">
+            <button id="edit-profile-btn">Edit Profile</button>
+            <button id="delete-account-btn" class="delete-btn">Delete Account</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="about">About Me</button>
+        <button class="tab-btn" data-tab="specializations">Specializations</button>
+        <button class="tab-btn" data-tab="offers">Placement Offers</button>
+        <button class="tab-btn" data-tab="help">Help Offered</button>
+      </div>
+
+      <div id="about" class="tab-panel active">
+        <p id="profile-about"></p>
+      </div>
+
+      <div id="specializations" class="tab-panel">
+        <ul id="profile-specializations"></ul>
+      </div>
+
+      <div id="offers" class="tab-panel">
+        <ul id="profile-offers"></ul>
+      </div>
+
+      <div id="help" class="tab-panel">
+        <ul id="profile-help"></ul>
+      </div>
+    </main>
+
+    <!-- Edit Profile Modal -->
+    <div id="editModal">
+      <div class="modal-content">
+        <span id="closeEditModal" style="float:right;cursor:pointer;">&times;</span>
+        <h2>Edit Your Profile</h2>
+
+        <form id="editProfileForm">
+          <div class="form-section">
+            <h3>Basic Info</h3>
+
+            <div class="form-row">
+              <label>Name:
+                <input type="text" id="editName" required>
+              </label>
+              <label>Graduation Year:
+                <input type="text" id="editYear" required>
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>Company:
+                <input type="text" id="editCompany">
+              </label>
+              <label>Designation:
+                <input type="text" id="editDesignation">
+              </label>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Details</h3>
+            <div class="form-row">
+              <label>Specializations:
+                <input type="text" id="editSpecializations" placeholder="Comma separated">
+              </label>
+              <label>Placement Offers:
+                <input type="text" id="editOffers" placeholder="Comma separated">
+              </label>
+            </div>
+            <div class="form-row">
+              <label>Help Offered:
+                <input type="text" id="editHelp" placeholder="Comma separated">
+              </label>
+            </div>
+
+            <label>About Me:
+              <textarea id="editAbout" rows="2"></textarea>
+            </label>
+          </div>
+
+          <div class="modal-buttons">
+            <button type="submit">Save Changes</button>
+            <button type="button" id="cancelEditBtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="senior-dashboard.js"></script>
+  </body>
+</html>

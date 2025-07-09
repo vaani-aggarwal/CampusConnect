@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #E3D5CA;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login{
+  background: #fff;
+  margin: 40px auto;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  width: 300px;
+  text-align: center;
+}
+
+.login input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login button {
+  width: 100%;
+  padding: 10px;
+  background: #614b4b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 5ms;
+  margin: 2px 12px;
+}
+
+.login button:hover {
+  background: rgb(93, 55, 55);
+}
+
+.login input:focus{
+  border-color: #614b4b;
+  box-shadow: 0 0 5px rgba(97, 75, 75, 0.5);
+  outline: none;
+}
+
+nav{
+  margin: 4px -30px;
+  padding: 5px;
+  position: relative;
+  top: -13px;
+  background-color: black;
+}
+
+img{
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+nav a{
+  text-decoration: none;
+  padding: 21px;
+  color: white;
+}
+
+form{
+  margin-left: -22px;
+  text-align: left;
+}
+
+form a{
+  color:black;
+  float: inline-end;
+  text-decoration: none;
+}
+
+form a:hover{
+  color: black;
+}
+
+form button{
+  padding-right: 5px;
+}
+
+footer a{
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.eye {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.remember input{
+  margin: 10px -310px 10px 10px;
+}

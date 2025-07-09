@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Student Dashboard - CampusConnect</title>
+        <link rel="stylesheet" href="junior-style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div class="nav-links">
+                    <h1>CampusConnect</h1>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="#" id="logout-btn">Log Out</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h3 id="welcome-text">Welcome, [student name]!</h3>
+                <p>Explore mentors by name, company, or interest.</p>
+                <br>
+            </section>
+
+            <section>
+                <div id="searchbox">
+                    <label for="search">Search Seniors</label>
+                    <input type="text" id="search" placeholder="name, domain, company">            
+                </div>
+            </section>
+
+            <section id="seniorlist">
+                <div class="flashcard">
+                    <h4>Riya Sharma</h4>
+                    <p>Company: Google</p>
+                    <p>Designation: Software Engineer</p>
+                    <p>Graduation Year: 2023</p>
+                    <button>View Profile</button>
+                </div>
+                <div class="flashcard">
+                    <h4>Aditya Mehta</h4>
+                    <p>Company: Deloitte</p>
+                    <p>Designation: Business Analyst</p>
+                    <p>Graduation Year: 2022</p>
+                    <button>View Profile</button>
+                </div>
+                <div class="flashcard">
+                    <h4>Sneha Iyer</h4>
+                    <p>Company: Infosys</p>
+                    <p>Designation: Quality Data Engineer</p>
+                    <p>Graduation Year: 2023</p>
+                    <button>View Profile</button>
+                </div>
+                <div class="flashcard">
+                    <h4>Kunal Verma</h4>
+                    <p>Company: TCS</p>
+                    <p>Designation: Data Engineer</p>
+                    <p>Graduation Year: 2021</p>
+                    <button>View Profile</button>
+                </div>
+            </section>
+        </main>
+        
+        <script src="junior-dashboard.js"></script>
+    </body>
+</html>
